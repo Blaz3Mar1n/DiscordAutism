@@ -46,9 +46,12 @@ async def on_message(message) :
                 talk+=i
         talk = talk[1:]
         print(talk)
-        rep = getresponse(talk)
-        print(rep)
-        await message.channel.send(rep)
+        if talk == 'Are you subscribed to PewDiePie?' :
+             await message.channel.send('Yes.I learned my lesson.')
+        else :
+            rep = getresponse(talk)
+            print(rep)
+            await message.channel.send(rep)
     if message.content.find('*help') != -1:
         await message.channel.send(''' ```Commands :
         
